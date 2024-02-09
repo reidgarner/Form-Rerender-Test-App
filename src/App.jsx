@@ -572,6 +572,20 @@ function FormDataForm() {
 export default function App() {
   return (
     <div className="grid grid-cols-2 grid-rows-2 gap-8 p-8">
+      <div>
+        <h1 className="text-3xl font-bold">React Form Rerender Comparison Tool</h1>
+        <p className="text-lg text-muted-foreground">
+          This is a simple comparison of different ways to handle forms in React.
+        </p>
+        <p>To test:</p>
+        <ul className="pl-4 list-disc">
+          <li>Type at least 5 characters into each input and press submit</li>
+          <li>See rerender score</li>
+          <li>Refresh page</li>
+          <li>Type less than 5 characters into each input and press submit</li>
+          <li>See rerender score</li>
+        </ul>
+      </div>
       <ControlledInputsForm />
       <UncontrolledInputsForm />
       <ShadcnForm />
