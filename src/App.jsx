@@ -370,6 +370,7 @@ function FormikForm() {
   function onSubmit(values) {
     alert(`Username: ${values.username}, Password: ${values.password}`)
   }
+
   return (
     <div className="flex flex-col justify-center px-8 py-6 space-y-2 border rounded-lg bg-neutral-50">
       <div>
@@ -417,7 +418,6 @@ function FormikForm() {
           handleBlur,
           handleSubmit,
           isSubmitting,
-          submitCount,
           touched,
         }) => (
           <form
