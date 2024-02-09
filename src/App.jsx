@@ -57,12 +57,10 @@ function ControlledInputsForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // Update form data
     setFormData({
       ...formData,
       [name]: value,
     });
-    // Validate and update errors
   };
 
   const validateForm = () => {
@@ -70,10 +68,7 @@ function ControlledInputsForm() {
       username: validateInput('username', formData.username),
       password: validateInput('password', formData.password),
     };
-
     setErrors(newErrors);
-
-    // Check if there are any errors
     return Object.values(newErrors).every((error) => error === '');
   };
 
@@ -484,7 +479,6 @@ function FormDataForm() {
   const validateForm = (formData) => {
     const username = formData.get('username');
     const password = formData.get('password');
-
     const usernameError = username.length < 5 ? 'Username must be at least 5 characters long' : '';
     const passwordError = password.length < 5 ? 'Password must be at least 5 characters long' : '';
     return {
